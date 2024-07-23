@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="courseForm">
+            <label for="courseCode">Course Code:</label>
+            <input type="text" id="courseCode" name="courseCode" required>
+            <label for="slot">Slot:</label>
+            <input type="text" id="slot" name="slot" required>
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color" required>
+            <label for="venue">Venue:</label>
+            <input type="text" id="venue" name="venue" required>
+            <button type="submit">Update Timetable</button>
+        </form>
+        <button id="exportButton">Export as PNG</button>
+    </div>
+    <div id="timetable-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Days/Timings</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8:30 - 9:25</td>
+                    <td id="slot1A">1A</td>
+                    <td id="slot4B">4B</td>
+                    <td id="slot7A">7A</td>
+                    <td id="slot3C">3C</td>
+                    <td id="slot7B">7B</td>
+                </tr>
+                <tr>
+                    <td>9:30 - 10:25</td>
+                    <td id="slot2A">2A</td>
+                    <td id="slot1B">1B</td>
+                    <td id="slot5A" rowspan="1.25">5A (9.30 to 10.55)<br>(L5)</td>
+                    <td id="slot4C">4C</td>
+                    <td id="slot5B" rowspan="1.25">5B (9.30 to 10.55)<br>(L6)</td>
+                </tr>
+                <tr>
+                    <td>10:35 - 11:30</td>
+                    <td id="slot3A">3A</td>
+                    <td id="slot2B">2B</td>
+                    <td id="slot6A" rowspan="1.25">6A (11.05 to 12.30)<br>(L5)</td>
+                    <td id="slot1C">1C</td>
+                    <td id="slot6B" rowspan="1.25">6B (11.05 to 12.30)<br>(L6)</td>
+                </tr>
+                <tr>
+                    <td>11:35 - 12:30</td>
+                    <td id="slot4A">4A</td>
+                    <td id="slot3B">3B</td>
+                    <td></td>
+                    <td id="slot2C">2C</td>
+                    <td></td>
+                </tr>
+                <tr class="break-row">
+                    <td colspan="6">LUNCH</td>
+                </tr>
+                <tr>
+                    <td>2:00 - 3:25</td>
+                    <td id="slot8A">8A<br>(L1)</td>
+                    <td id="slot10A">10A<br>(L2)</td>
+                    <td id="slotX1">X1<br>(LX)</td>
+                    <td id="slot8B">8B<br>(L3)</td>
+                    <td id="slot10B">10B<br>(L4)</td>
+                </tr>
+                <tr>
+                    <td>3:30 - 4:55</td>
+                    <td id="slot9A">9A<br>(L1)</td>
+                    <td id="slot11A">11A<br>(L2)</td>
+                    <td id="slotX2">X2<br>(LX)</td>
+                    <td id="slot9B">9B<br>(L3)</td>
+                    <td id="slot11B">11B<br>(L4)</td>
+                </tr>
+                <tr class="break-row">
+                    <td colspan="6">BREAK</td>
+                </tr>
+                <tr>
+                    <td>5:30 - 6:55</td>
+                    <td id="slot12A">12A</td>
+                    <td id="slot14A">14A</td>
+                    <td id="slotXC">XC</td>
+                    <td id="slot12B">12B</td>
+                    <td id="slot14B">14B</td>
+                </tr>
+                <tr>
+                    <td>7:00 - 8:25</td>
+                    <td id="slot13A">13A</td>
+                    <td id="slot15A">15A</td>
+                    <td id="slotXD">XD</td>
+                    <td id="slot13B">13B</td>
+                    <td id="slot15B">15B</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
